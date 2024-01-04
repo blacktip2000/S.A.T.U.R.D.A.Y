@@ -20,7 +20,7 @@ require (
 )
 
 require (
-	github.com/ggerganov/whisper.cpp/bindings/go v0.0.0-20230716200034-399846572185 // indirect
+	github.com/ggerganov/whisper.cpp/bindings/go v0.0.0-20240103173633-9962371f71b9 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/pion/datachannel v1.5.2 // indirect
 	github.com/pion/dtls/v2 v2.1.3 // indirect
