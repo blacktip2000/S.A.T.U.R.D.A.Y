@@ -1,5 +1,5 @@
 WHISPER_DIR := $(abspath ./whisper.cpp)
-MODEL_NAME := base.en
+MODEL_NAME := base
 MODEL_FILE_NAME := ggml-$(MODEL_NAME).bin
 MODELS_DIR := models
 
@@ -16,7 +16,7 @@ fetch-whisper:
 	@git submodule update
 
 fetch-model:
-	@${MAKE} -C ./whisper.cpp base.en
+	@${MAKE} -C ./whisper.cpp base
 	@cp $(WHISPER_DIR)/models/ggml-$(MODEL_NAME).bin $(MODELS_DIR)
 
 build-whisper-lib:

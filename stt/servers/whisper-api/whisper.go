@@ -26,7 +26,7 @@ func NewWhisperModel() (*WhisperModel, error) {
 	if !*debug {
 		logr.SetGlobalOptions(logr.GlobalConfig{V: int(zerolog.DebugLevel)})
 	}
-	ctx := whisper.Whisper_init("./models/ggml-base.en.bin")
+	ctx := whisper.Whisper_init("./models/ggml-base.bin")
 	if ctx == nil {
 		return nil, errors.New("failed to initialize whisper")
 	}
@@ -40,7 +40,7 @@ func NewWhisperModel() (*WhisperModel, error) {
 	params.SetMaxTokensPerSegment(32)
 	params.SetThreads(int(math.Min(float64(4), float64(runtime.NumCPU()))))
 	params.SetSpeedup(false)
-	params.SetLanguage(ctx.Whisper_lang_id("en"))
+	params.SetLanguage(ctx.Whisper_lang_id("ko"))
 
 	logger.Infof("Initialized whisper model with params:\n %s", params.String())
 

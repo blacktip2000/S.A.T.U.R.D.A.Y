@@ -14,7 +14,7 @@ var (
 )
 
 func main() {
-	whisperEngine, err := whisper.New("../models/ggml-base.en.bin")
+	whisperEngine, err := whisper.New("../models/ggml-base.bin")
 	if err != nil {
 		logger.Fatal(err, "error creating whisper model")
 	}

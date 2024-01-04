@@ -40,7 +40,7 @@ func New(modelPath string) (*WhisperModel, error) {
 	params.SetMaxTokensPerSegment(32)
 	params.SetThreads(int(math.Min(float64(4), float64(runtime.NumCPU()))))
 	params.SetSpeedup(false)
-	params.SetLanguage(ctx.Whisper_lang_id("en"))
+	params.SetLanguage(ctx.Whisper_lang_id("ko"))
 
 	Logger.Infof("Initialized whisper model with params:\n %s", params.String())
 

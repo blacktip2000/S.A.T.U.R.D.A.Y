@@ -1,6 +1,6 @@
 WHISPER_DIR := $(abspath ../whisper.cpp)
 MODELS_DIR := $(abspath ../models)
-MODEL_NAME := base.en
+MODEL_NAME := base
 MODEL_FILE_NAME := ggml-$(MODEL_NAME).bin
 # TODO make this configurable
 INCLUDE_PATH := $(WHISPER_DIR)
